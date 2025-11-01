@@ -21,7 +21,7 @@
     --very-dark-gray-color: #707070;
 
     --primary-font: "Raleway", sans-serif;
-    --secondary-font: "Open Sans";
+    --secondary-font: "Open Sans", sans-serif;
 }
 .container {
     display: flex;
@@ -33,7 +33,7 @@
 }
 
 .top-section {
-    width: 100%;
+    width: 101.625rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -77,6 +77,7 @@
     text-transform: uppercase;
     position: relative;
     letter-spacing: 0.205rem;
+    font-size: 0.688rem;
 }
 
 
@@ -104,4 +105,79 @@
 .top-section__nav-item:hover .top-section__nav-link::after {
     opacity: 1;
 }
+
+.header {
+    width: 101.625rem;
+    height: 37.125rem;
+    background-image: url("../images/background.png");                  /* pot do tvoje slike */
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: padding-box;
+    color: white;
+    display: flex;
+    align-items: center;      /* vertikalno centriranje vsebine */
+    justify-content: center;  /* horizontalno centriranje vsebine */
+    text-align: center;       /* centriranje teksta znotraj containerja */
+    margin-top: 24.75rem;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    max-width: 1200px;
+    padding: 0;
+    background-color: transparent;
+    color: var(--black-color);
+    margin-bottom: 500px;
+}
+
+.header__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 450;
+    font-size: 3rem;
+    color: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.header__subtitle {
+    width: 24em;
+    height: 1.375em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 38px;
+}
+
+.btn {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.btn-container {
+    width: 440px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-color);
+    border-radius: 2.5rem;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 270px;
+}
+
+.btn-container .btn:hover {
+    background-color: #07ACE6; /* malo svetlejša modra ob hoverju */
+}
+
+
 
