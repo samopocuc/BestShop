@@ -1,6 +1,10 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-/* variables */
+/* ========================
+   Variables
+======================== */
 :root {
     --white-color: #FFFFFF;
     --black-color: #000000;
@@ -22,12 +26,23 @@
 
     --primary-font: "Raleway", sans-serif;
     --secondary-font: "Open Sans", sans-serif;
+
+    /* Font sizes */
+    --fs-btn: 1rem;
+    --fs-header-title: 3rem;
+    --fs-header-subtitle: 1.25rem;
+    --fs-number: 1.25rem; /* ~20px */
+    --fs-text: 0.6875rem; /* ~11px */
 }
+
+/* ========================
+   Top Section
+======================== */
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-height: 70px;
+    max-height: 4.375rem; /* 70px → rem: 4.375rem */
     margin: 0 auto;
     background-color: var(--white-color);
 }
@@ -41,14 +56,14 @@
     justify-content: space-between;
     align-items: center;
     min-height: 4.375rem;
-    background: #FFFFFF;
+    background: var(--white-color);
     box-shadow: 0 0.188rem 0.375rem var(--black-color-transparent-200);
 }
 
 .top-section__logo {
-    width: 142px;
-    height: 37px;
-    font-family: "Raleway", sans-serif;
+    width: 8.875rem;  /* 142px */
+    height: 2.313rem; /* 37px */
+    font-family: var(--primary-font);
     font-weight: 300;
     font-size: 2rem;
     color: var(--blue-color);
@@ -58,13 +73,11 @@
     line-height: 2.313rem;
     display: flex;
     align-items: center;
-    letter-spacing: 0;
-
 }
 
 .top-section__nav-list {
-    font-family: "Open Sans", sans-serif;
-    font-weight: normal;
+    font-family: var(--secondary-font);
+    font-weight: 400;
     display: flex;
     gap: 5.938rem;
     padding-right: 8.5rem;
@@ -77,48 +90,46 @@
     text-transform: uppercase;
     position: relative;
     letter-spacing: 0.205rem;
-    font-size: 0.688rem;
+    font-size: var(--fs-text);
 }
 
-
-
-/* Barva ob hoverju */
 .top-section__nav-item:hover .top-section__nav-link {
     color: var(--black-color);
     font-weight: 700;
 }
 
-/* Custom underline */
 .top-section__nav-item .top-section__nav-link::after {
     content: "";
     position: absolute;
-    left: 50%;              /* začetek iz sredine */
-    transform: translateX(-50%); /* poravna na sredino */
-    bottom: -24px;        /* spuščeno malo nižje (po potrebi spreminjaš) */
-    width: 84px;            /* fiksna dolžina črte */
-    height: 0.25rem;        /* debelina črte, kot si imel */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.5rem; /* 24px → 1.5rem */
+    width: 5.25rem;  /* 84px → 5.25rem */
+    height: 0.25rem;
     background-color: var(--blue-color);
-    opacity: 0;             /* skrito, dokler ni hover */
+    opacity: 0;
 }
 
-/* Pokaži črto na hover */
 .top-section__nav-item:hover .top-section__nav-link::after {
     opacity: 1;
 }
 
+/* ========================
+   Header
+======================== */
 .header {
     width: 101.625rem;
     height: 37.125rem;
-    background-image: url("../images/background.png");                  /* pot do tvoje slike */
+    background-image: url("../images/background.png");
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: padding-box;
-    color: white;
+    color: var(--white-color);
     display: flex;
-    align-items: center;      /* vertikalno centriranje vsebine */
-    justify-content: center;  /* horizontalno centriranje vsebine */
-    text-align: center;       /* centriranje teksta znotraj containerja */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 24.75rem;
 }
 
@@ -129,41 +140,43 @@
     justify-content: center;
     width: 100%;
     text-align: center;
-    max-width: 1200px;
+    max-width: 101.625rem;
     padding: 0;
     background-color: transparent;
     color: var(--black-color);
-    margin-bottom: 500px;
+    margin-bottom: 31.25rem; /* 500px → 31.25rem */
 }
 
 .header__title {
-    font-family: "Raleway", sans-serif;
+    font-family: var(--primary-font);
     font-weight: 450;
-    font-size: 3rem;
+    font-size: var(--fs-header-title);
     color: var(--black-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-
+    margin-bottom: 1.25rem; /* 20px → 1.25rem */
 }
 
 .header__subtitle {
     width: 24em;
     height: 1.375em;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.25rem;
-    margin-bottom: 38px;
+    font-family: var(--secondary-font);
+    font-size: var(--fs-header-subtitle);
+    margin-bottom: 2.375rem; /* 38px → 2.375rem */
 }
 
+/* ========================
+   Button
+======================== */
 .btn {
     color: var(--white-color);
     text-decoration: none;
 }
 
 .btn-container {
-    width: 440px;
-    height: 67px;
+    width: 27.5rem;  /* 440px → rem */
+    height: 4.1875rem; /* 67px → rem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,13 +184,102 @@
     border-radius: 2.5rem;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1rem;
-    margin-bottom: 270px;
+    font-size: var(--fs-btn);
+    margin-bottom: 16.875rem; /* 270px → rem */
 }
 
 .btn-container .btn:hover {
-    background-color: #07ACE6; /* malo svetlejša modra ob hoverju */
+    background-color: var(--vivid-blue-color);
 }
+
+/* ========================
+   Stolpci
+======================== */
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9rem; /* 20px → rem */
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 12.5rem;  /* 200px → rem */
+    height: 15.625rem; /* 250px → rem */
+    text-align: center;
+    padding-top: 6.25rem; /* 100px → rem, prostor za krog + sliko */
+}
+
+.circle {
+    width: 3.9375rem;  /* 63px → rem */
+    height: 3.9375rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.25rem;      /* 20px → rem */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.column:nth-child(1) .circle { background-color: var(--blue-color); }
+.column:nth-child(2) .circle { background-color: var(--red-color); }
+.column:nth-child(3) .circle { background-color: var(--green-color); }
+
+.column-img {
+    position: absolute;
+    top: 20%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.column:nth-child(1) .column-img { width: 3.25rem; height: 2.75rem; } /* 52x44px → rem */
+.column:nth-child(2) .column-img { width: 4.0625rem; height: 2.25rem; } /* 65x36px → rem */
+.column:nth-child(3) .column-img { width: 3.25rem; height: 3rem; } /* 52x48px → rem */
+
+.number {
+    font-size: var(--fs-number);
+    font-weight: 800;
+    font-family: var(--primary-font);
+    color: var(--black-color);
+    margin-bottom: 0.3125rem; /* 5px → rem */
+    z-index: 3;
+}
+
+.column p {
+    font-size: var(--fs-text);
+    margin: 0.125rem 0 0 0; /* 2px → rem */
+    line-height: 1.25em;
+    color: var(--very-dark-gray-color);
+}
+
+.section__container {
+        width: 101.625rem; /* fiksna širina, enaka kot header */
+        min-width: 101.625rem; /* prepreči manjšo širino */
+        max-width: 101.625rem; /* prepreči širitev na večjih ekranih */
+        height: 531px;
+        background-color: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* vertikalno centriranje vsebine */
+        align-items: center;     /* horizontalno centriranje vsebine znotraj fiksnega containerja */
+    }
+
+.section__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.25rem;
+    width: 44.675rem;
+    height: 2.625rem;
+    white-space: nowrap;
+    color: var(--black-color);
+    text-align: center;
+    margin: 1.3rem 0 6.2rem 0;
+}
+
 
 
 
