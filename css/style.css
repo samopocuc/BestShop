@@ -281,31 +281,42 @@
 }
 
 .features__container {
-    width: 101.625rem;
-    min-width: 101.625rem;
-    max-width: 101.625rem;
-    height: 87.188rem;
+    width: 70.25rem;
+    min-width: 70.25rem;
+    max-width: 70.25rem;
+    height: 23.125rem;
     display: flex;
-    flex-direction: column;
-    gap: 100px; /* razmik med vrsticami */
-    align-items: flex-start; /* centrirano horizontalno */
+    justify-content:center;
+    gap: 10.563rem;
+
 }
 
 .feature-row {
+    width: 70.25rem;
     display: flex;
     align-items: center; /* vertikalna poravnava besedila in slike */
     justify-content: center;
-    margin-left: 17.875rem;
+    margin-left: 31.438rem;
+    gap: 10.563rem
+}
+.features__container2 {
+    width: 70.25rem;
+    min-width: 70.25rem;
+    max-width: 70.25rem;
+    height: 23.125rem;
+    display: flex;
+    justify-content:center;
+    gap: 10.563rem;
+
 }
 
 .feature-row.reverse {
-    width: 70.25rem;             /* fiksna širina */
+    width: 70.25rem;            /* fiksna širina */
     height: 23.125rem;
     display: flex;
     align-items: center;
     gap: 12rem;
-    margin-left: auto;            /* potisne vrstico proti desni */
-    margin-right: 271px;          /* odmik od desnega roba */
+
 }
 
 
@@ -315,15 +326,39 @@
 }
 
 .feature-text {
-    width: 623px; /* fiksna širina besedila */
-    height: 370px;
+    width: 416px; /* fiksna širina besedila */
+    height: 188px;
     text-align: left;  /* centrirano besedilo */
-    margin: 0; /* vertikalni razmik od vrha in dna vrstice */
-    margin-bottom: 7.5rem;
-    padding: 69px 34px 114px 36px;
+    border: none;              /* odstrani vse meje */
+    position: relative;
+}
+/* Pseudo-element ::after za spodnjo črto */
+.feature-text.color_red::after,
+.feature-text.color_blue::after,
+.feature-text.color_green::after {
+    content: "";
+    position: absolute;
+    bottom: 0;                 /* na dnu bloka */
+    left: 0;
+    width: 327px;              /* dolžina črte */
+    height: 4px;               /* debelina črte */
+}
+
+/* Barve za posamezne vrstice */
+.feature-text.color_red::after {
+    background-color: #FB3B64;
+}
+
+.feature-text.color_blue::after {
+    background-color: #08A6E4;
+}
+
+.feature-text.color_green::after {
+    background-color: #55DFB4;
 }
 
 .feature-text h3 {
+
     font-family: var(--primary-font); /* Raleway */
     font-size: 36px;
     line-height: 42px;
@@ -344,3 +379,74 @@
     width: 24.15rem;
     height: 13.68rem;
 }
+
+.feature-row.separated {
+    width: 70.25rem;
+    height: 23.125rem;
+    display: flex;          /* horizontalna postavitev */
+    align-items: center;    /* vertikalno centriranje */
+    gap: 11rem;              /* večji razmik med tekstom in sliko, ker je "separated" */
+    margin-left: 251px;
+}
+
+/* Osnovni stil za vse feature-img div-e */
+.feature-img1,
+.feature-img2,
+.feature-img3 {
+    position: relative;      /* za pozicioniranje pseudo-elementa */
+    display: inline-block;   /* da pseudo-element ne pokvari layouta */
+}
+
+/* Štirikotnik za prvo sliko */
+.feature-img1::before {
+    content: "";
+    position: absolute;
+    top: 50%;                /* centrirano po vertikali */
+    left: 55%;               /* centrirano po horizontali */
+    transform: translate(-50%, -50%); /* centriranje */
+    width: 210px;            /* širina oblike */
+    height: 210px;           /* višina oblike */
+    background-color: #FB3B64; /* barva oblike */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* štirikotnik */
+    z-index: -1;             /* da je za sliko */
+    border-radius: 41px;
+    rotate: 40deg;
+}
+
+/* Krog za drugo sliko */
+.feature-img2::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background-color: #07ACE6;
+    border-radius: 50%;      /* naredi krog */
+    z-index: -1;
+}
+
+/* Kvadrat za tretjo sliko */
+.feature-img3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 440px;
+    height: 370px;
+    background-color: #55DFB4;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* kvadrat */
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.feature-img3 img {
+    transform: translateY(30px); /* premakne navzdol za 15px */
+}
+
+.feature-img1 img {
+    transform: translateY(15px); /* premakne sliko 15px navzdol */
+}
+
