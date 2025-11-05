@@ -35,6 +35,9 @@
     --fs-text: 0.6875rem; /* ~11px */
 }
 
+
+
+
 /* ========================
    Top Section
 ======================== */
@@ -48,7 +51,7 @@
 }
 
 .top-section {
-    width: 101.625rem;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -118,7 +121,7 @@
    Header
 ======================== */
 .header {
-    width: 101.625rem;
+    width: 100%;
     height: 37.125rem;
     background-image: url("../images/background.png");
     background-position: bottom center;
@@ -140,7 +143,6 @@
     justify-content: center;
     width: 100%;
     text-align: center;
-    max-width: 101.625rem;
     padding: 0;
     background-color: transparent;
     color: var(--black-color);
@@ -258,9 +260,7 @@
 }
 
 .section__container {
-        width: 101.625rem; /* fiksna širina, enaka kot header */
-        min-width: 101.625rem; /* prepreči manjšo širino */
-        max-width: 101.625rem; /* prepreči širitev na večjih ekranih */
+        width: 100%;
         height: 531px;
         background-color: var(--white-color);
         display: flex;
@@ -281,9 +281,7 @@
 }
 
 .features__container {
-    width: 70.25rem;
-    min-width: 70.25rem;
-    max-width: 70.25rem;
+    width: 100%;
     height: 23.125rem;
     display: flex;
     justify-content:center;
@@ -294,17 +292,14 @@
 }
 
 .feature-row {
-    width: 70.25rem;
+    width: 100%;
     display: flex;
     align-items: center; /* vertikalna poravnava besedila in slike */
     justify-content: center;
-    margin-left: 31.438rem;
     gap: 10.563rem
 }
 .features__container2 {
-    width: 70.25rem;
-    min-width: 70.25rem;
-    max-width: 70.25rem;
+    width: 100%;
     height: 23.125rem;
     display: flex;
     justify-content:center;
@@ -313,14 +308,20 @@
 }
 
 .feature-row.reverse {
-    width: 70.25rem;            /* fiksna širina */
+    width: 100%;            /* fiksna širina */
     height: 23.125rem;
     display: flex;
     align-items: center;
     gap: 12rem;
+}
+.feature-row.separated {
+    width: 100%;
+    height: 23.125rem;
+    display: flex;          /* horizontalna postavitev */
+    align-items: center;    /* vertikalno centriranje */
+    gap: 11rem;              /* večji razmik med tekstom in sliko, ker je "separated" */
 
 }
-
 
 
 .feature-img-wrapper {
@@ -382,14 +383,7 @@
     height: 13.68rem;
 }
 
-.feature-row.separated {
-    width: 70.25rem;
-    height: 23.125rem;
-    display: flex;          /* horizontalna postavitev */
-    align-items: center;    /* vertikalno centriranje */
-    gap: 11rem;              /* večji razmik med tekstom in sliko, ker je "separated" */
-    margin-left: 251px;
-}
+
 
 /* Osnovni stil za vse feature-img div-e */
 .feature-img1,
@@ -452,13 +446,14 @@
     transform: translateY(15px); /* premakne sliko 15px navzdol */
 }
 
-/* Section Container */
+/*<!-- pricing -->*/
 .section-container {
     max-width: 1266px;
     margin: 0 auto;
     display: flex;
     flex-direction: column; /* naslov nad stolpci */
     align-items: center;    /* centrirano horizontalno */
+
 }
 
 /* Naslov sekcije */
@@ -490,6 +485,7 @@
     justify-content: center;
     align-items: center;
     gap: 58px;
+
 }
 
 /* Posamezni stolpci */
@@ -583,5 +579,48 @@
     box-sizing: border-box;
 }
 
+.section-container {
 
 
+}
+#contact .section__column {
+    border: none;
+}
+
+#contact.container {
+
+}
+
+#contact > .contact-wrapper {
+    display: flex;
+    justify-content: space-between; /* levi stolpec levo, desni desno */
+    align-items: flex-start;
+    width: 100%;                    /* wrapper sedaj zavzame celotno širino */
+    gap: 40px;                     /* prostor med stolpci */
+    box-sizing: border-box;
+}
+
+#contact > .contact-wrapper {
+    position: relative;
+    height: auto;
+}
+
+#contact .contact-row {
+
+    left: 0; /* levi rob okna */
+    top: 0;
+}
+
+#contact .section__columns {
+
+    right: 0; /* desni rob okna */
+    top: 0;
+}
+
+
+
+#footer .container {
+    height: 89px;
+    background-color: var(--lynx-white-color);
+    box-shadow: 0 -5px 40px var(--black-color-transparent-200);
+}
