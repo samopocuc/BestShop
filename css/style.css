@@ -595,6 +595,8 @@
     width: 440px;
     height: 372px;
     flex: none;
+    border: none;
+
 
 }
 .contact-row {
@@ -636,7 +638,7 @@
     display: flex;        /* postavi p-je v vrsto */
     gap: 20px;            /* razmik med njima */
     align-items: center;  /* vertikalno centriranje ikon in besedila */
-    margin-left: px;
+
 }
 .contact-row .contact-info-row p {
     color: var(--dark-gray-color);
@@ -660,9 +662,78 @@
 .contact-info-row p:last-child::before {
     background-image: url('../images/phone_icon.svg');
 }
+/*-- e: any questions --*/
+#contact-form .form__input {
+    width: 100%;                /* input se razteza do robov stolpca */
+    height: 57px;
+    padding: 8px 0;             /* malo prostora zgoraj in spodaj */
+    margin-bottom: 20px;        /* razmik med inputi */
+    border: none;               /* odstranimo standardni okvir */
+    border-bottom: 1px solid var(--gray-color); /* spodnja črta */
+    font-size: 11px;
+    outline: none;              /* odstranimo modro obrobo ob fokusu */
+    color: var(--blue-color);
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    line-height: 15px;
+    text-align: start;
+}
+
+
+#contact-form .form__input:focus {
+    border-bottom: 2px solid var(--blue-color); /* poudarek na aktivnem inputu */
+}
+.form__checkbox-container {
+    display: flex;          /* postavi checkbox in label v vrstico */
+    align-items: flex-start;    /* vertikalno centrirano */
+    gap: 10px;              /* razmik med checkboxom in besedilom */
+
+}
+.form__checkbox-container input[type="checkbox"] {
+    display: none;
+}
+.form__checkbox-container label::before {
+    content: "";
+    display: inline-block;
+    width: 24px;          /* širina checkboxa */
+    height: 24px;         /* višina checkboxa */
+    border: 1px solid var(--gray-color);  /* okvir */
+    border-radius: 4px;       /* optional */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.form__checkbox-container input[type="checkbox"]:checked + label::before {
+    background-image: url('../images/checkmark.svg'); /* pot do tvoje ikone */
+    background-size: 12px 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.form__checkbox {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--very-dark-gray-color);
+}
+.form__checkbox-container label {
+    display: inline-block;   /* omogoči normalni text flow */
+    line-height: 17px;
+    text-align: left;
+}
 
 
 
+
+#contact-form input[type="submit"][value="Send"] {
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 35px;
+    width: 226px;
+    height: 57px;
+    border: none;
+    box-shadow: 5px 10px 14px var(--blue-color-transparent);
+    position: absolute;
+    right: 366px;
+}
 
 
 
