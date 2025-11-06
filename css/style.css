@@ -737,9 +737,51 @@
 
 
 
-
+/* --footer-- */
 #footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 89px;
     background-color: var(--lynx-white-color);
     box-shadow: 0 -5px 40px var(--black-color-transparent-200);
+}
+.footer__columns {
+    display: flex;         /* že imaš flex */
+    justify-content: flex-start; /* ohrani levi stolpec na levi */
+    position: relative;    /* za absolute položaj social ikon */
+    width: 100%;
+}
+
+.footer__social-icons {
+    position: absolute; /* potisne social ikone ven iz normalnega toka */
+    transform: translateY(140%);
+    right: 0;              /* na desni rob containerja */
+    display: flex;
+    gap: 20px;             /* razmik med ikonami */
+    margin-right: 136px;
+    align-items: center;
+}
+.footer__logo {
+    width: 115px;
+    height: 30px;
+    font-family: var(--primary-font), sans-serif;
+    font-weight: 300;
+    font-size: 1.625rem;
+    color: var(--blue-color);
+    text-align: left;
+    margin-left: 8.5rem;
+    margin-top: 20px;
+    line-height: 1.875rem;
+    display: flex;
+    align-items: center;
+}
+.footer__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--dark-gray-color);
+    margin-left: 137px;
+    margin-top: 6px;
+    margin-bottom: 17px;
 }
