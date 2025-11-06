@@ -160,29 +160,33 @@
     </section>
 
     <section class="section_container" id="contact">
-        <div class="contact-wrapper">
-        <div class="contact-row">
-        <h2 class="section__title">Any questions?</h2>
-        <p class="section__subtitle">Leave your email address or call us!</p>
-        <p class="section__subtitle">info@bestshop.xyz</p>
-        <p class="section__subtitle">123 456 789</p>
-        </div>
-        <div class="section__columns">
-            <div class="section__column">
-                <form action="#" class="form">
-                    <input type="text" placeholder="Name" id="name" class="form__input" /><br/>
-                    <input type="text" placeholder="E-mail" id="email" class="form__input" /><br/>
-                    <div class="form__checkbox-container">
-                        <input type="checkbox" id="checkbox" />
-                        <label for="checkbox" class="form__checkbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+        <div class="contact-wrapper"> <!-- wrapper za vse -->
+            <div class="contact-columns"> <!-- NOVI skupni container za stolpce -->
+                <!-- Levi stolpec -->
+                <div class="contact-row">
+                    <h2 class="section__title">Any questions?</h2>
+                    <p class="section__subtitle">Leave your email address or call us!</p>
+                    <div class="contact-info-row">
+                        <p class="section__subtitle">info@bestshop.xyz</p>
+                        <p class="section__subtitle">123 456 789</p>
                     </div>
-                    <input type="submit" value="Send" class="btn btn-adjacent btn-small" />
-                </form>
-
-            </div>
-        </div>
-        </div>
+                </div>
+                <!-- Desni stolpec -->
+                <div class="section__column" id="contact-form">
+                    <form action="#" class="form">
+                        <input type="text" placeholder="Name" id="name" class="form__input" /><br/>
+                        <input type="text" placeholder="E-mail" id="email" class="form__input" /><br/>
+                        <div class="form__checkbox-container">
+                            <input type="checkbox" id="checkbox" />
+                            <label for="checkbox" class="form__checkbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                        </div>
+                        <input type="submit" value="Send" class="btn btn-adjacent btn-small" />
+                    </form>
+                </div>
+            </div> <!-- e: contact-columns -->
+        </div> <!-- e: contact-wrapper -->
     </section>
+
     <!-- footer -->
     <footer class="footer" id="footer">
         <div class="container">

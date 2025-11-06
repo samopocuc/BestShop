@@ -578,44 +578,92 @@
     color: var(--pink-color);
     box-sizing: border-box;
 }
+/*<!--  e: pricing -->*/
 
-.section-container {
-
-
-}
-#contact .section__column {
-    border: none;
-}
-
-#contact.container {
-
-}
-
-#contact > .contact-wrapper {
+.contact-columns {
     display: flex;
-    justify-content: space-between; /* levi stolpec levo, desni desno */
-    align-items: flex-start;
-    width: 100%;                    /* wrapper sedaj zavzame celotno širino */
-    gap: 40px;                     /* prostor med stolpci */
-    box-sizing: border-box;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 896px;
+    height: 376px;
+    margin: 179px auto 0 auto;
+
 }
 
-#contact > .contact-wrapper {
-    position: relative;
-    height: auto;
+#contact-form {
+    width: 440px;
+    height: 372px;
+    flex: none;
+
+}
+.contact-row {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+#contact .contact-row > .section__title {
+    text-align: left;  /* poravnava h2 na levi rob levega stolpca */
+
+}
+.section__title {
+    width: 342px;
+    height: 57px;
+    font-family: Raleway, sans-serif sans-serif;
+    font-size: 49px;
+    line-height: 57px;
+    margin-top: 0;
+    color: var(--black-color);
+    letter-spacing: 0;
+    margin-bottom: 22px;
+}
+.section__subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: var(--black-color);
+    line-height: 22px;
+    margin-bottom: 42px;
+}
+.contact-info-row {
+    display: flex;        /* postavi p-je v vrsto */
+    gap: 20px;            /* razmik med njima */
+    align-items: center;  /* vertikalno centriranje ikon in besedila */
+
+}
+.contact-info-row {
+    display: flex;        /* postavi p-je v vrsto */
+    gap: 20px;            /* razmik med njima */
+    align-items: center;  /* vertikalno centriranje ikon in besedila */
+    margin-left: px;
+}
+.contact-row .contact-info-row p {
+    color: var(--dark-gray-color);
+}
+.contact-info-row p:first-child::before,
+.contact-info-row p:last-child::before {
+    content: "";
+    display: inline-block;       /* nujno za prikaz v isti vrstici kot besedilo */
+    width: 27px;
+    height: 27px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;     /* poravna z besedilom */
 }
 
-#contact .contact-row {
-
-    left: 0; /* levi rob okna */
-    top: 0;
+.contact-info-row p:first-child::before {
+    background-image: url('../images/mail_icon.svg');
 }
 
-#contact .section__columns {
-
-    right: 0; /* desni rob okna */
-    top: 0;
+.contact-info-row p:last-child::before {
+    background-image: url('../images/phone_icon.svg');
 }
+
+
+
+
 
 
 
