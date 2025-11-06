@@ -24,15 +24,8 @@
     --gray-color: #95989A;
     --very-dark-gray-color: #707070;
 
-    --primary-font: "Raleway";
-    --secondary-font: "Open Sans";
-
-    /* Font sizes */
-    --fs-btn: 1rem;
-    --fs-header-title: 3rem;
-    --fs-header-subtitle: 1.25rem;
-    --fs-number: 1.25rem; /* ~20px */
-    --fs-text: 0.6875rem; /* ~11px */
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Open Sans", sans-serif;
 }
 
 
@@ -66,7 +59,7 @@
 .top-section__logo {
     width: 8.875rem;  /* 142px */
     height: 2.313rem; /* 37px */
-    font-family: var(--primary-font);
+    font-family: var(--primary-font), sans-serif;
     font-weight: 300;
     font-size: 2rem;
     color: var(--blue-color);
@@ -79,7 +72,7 @@
 }
 
 .top-section__nav-list {
-    font-family: var(--secondary-font);
+    font-family: var(--secondary-font), sans-serif;
     font-weight: 400;
     display: flex;
     gap: 5.938rem;
@@ -93,7 +86,7 @@
     text-transform: uppercase;
     position: relative;
     letter-spacing: 0.205rem;
-    font-size: var(--fs-text);
+    font-size: 0.6875rem;
 }
 
 .top-section__nav-item:hover .top-section__nav-link {
@@ -150,9 +143,9 @@
 }
 
 .header__title {
-    font-family: var(--primary-font);
+    font-family: var(--primary-font), sans-serif;
     font-weight: 450;
-    font-size: var(--fs-header-title);
+    font-size: 3rem;
     color: var(--black-color);
     display: flex;
     align-items: center;
@@ -163,8 +156,8 @@
 .header__subtitle {
     width: 24em;
     height: 1.375em;
-    font-family: var(--secondary-font);
-    font-size: var(--fs-header-subtitle);
+    font-family: var(--secondary-font), sans-serif;
+    font-size: 1.25rem;
     margin-bottom: 2.375rem; /* 38px → 2.375rem */
 }
 
@@ -186,7 +179,7 @@
     border-radius: 2.5rem;
     text-decoration: none;
     font-weight: 800;
-    font-size: var(--fs-btn);
+    font-size: 1rem;
     margin-bottom: 16.875rem; /* 270px → rem */
 }
 
@@ -244,16 +237,16 @@
 .column:nth-child(3) .column-img { width: 3.25rem; height: 3rem; } /* 52x48px → rem */
 
 .number {
-    font-size: var(--fs-number);
+    font-size: 1.25rem;
     font-weight: 800;
-    font-family: var(--primary-font);
+    font-family: var(--primary-font), sans-serif;
     color: var(--black-color);
     margin-bottom: 0.3125rem; /* 5px → rem */
     z-index: 3;
 }
 
 .column p {
-    font-size: var(--fs-text);
+    font-size: 0.6875rem;
     margin: 0.125rem 0 0 0; /* 2px → rem */
     line-height: 1.25em;
     color: var(--very-dark-gray-color);
@@ -362,7 +355,7 @@
 
 .feature-text h3 {
 
-    font-family: var(--primary-font); /* Raleway */
+    font-family: var(--primary-font), sans-serif; /* Raleway */
     font-size: 36px;
     line-height: 42px;
     font-weight: 400;
@@ -371,7 +364,7 @@
 }
 
 .feature-text p {
-    font-family: var(--secondary-font); /* Open Sans */
+    font-family: var(--secondary-font), sans-serif;
     font-size: 16px;
     line-height: 22px; /* izboljšana berljivost */
     color: var(--black-color);
@@ -465,7 +458,7 @@
 
 }
 .section__column--title {
-    font-family: var(--primary-font) sans-serif;
+    font-family: var(--primary-font), sans-serif;
     font-size: 20px;
     color: var(--dark-blue-color);
     font-weight: bold;
@@ -475,7 +468,7 @@
     font-size: 21px;
 }
 .section__column--subtitle {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--secondary-font), sans-serif;
     font-size: 14px;
 }
 
