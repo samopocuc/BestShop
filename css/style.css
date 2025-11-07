@@ -27,8 +27,7 @@
     justify-content: space-between;
     align-items: center;
     max-height: 4.375rem;
-    margin: 0 auto;
-    margin-bottom: 8.125rem;
+    margin: 0 auto 8.125rem;
     background-color: var(--white-color);
 }
 .top-section {
@@ -167,7 +166,6 @@
 }/*-- e: button --*/
 /*-- e: header --*/
 /*-- section2 The most popular sales platform in country --*/
-/*-- Stolpci --*/
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -193,7 +191,6 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-
 }
 .column:nth-child(1) .circle { background-color: var(--red-color); } /*-- left column--*/
 .column:nth-child(2) .circle { background-color: var(--blue-color); } /*-- middle column --*/
@@ -228,7 +225,7 @@
     background-color: var(--white-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .section__title {
@@ -629,6 +626,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 89px;
+    background-color: var(--lynx-white-color);
+    box-shadow: 0 -0.3125rem 2.5rem var(--black-color-transparent-200);
+}
+.footer__columns {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+.footer__social-icons {
+    position: absolute;
+    transform: translateY(140%);
+    right: 0;
+    display: flex;
+    gap: 20px;
+    margin-right: 136px;
+    align-items: center;
+}
+.footer__logo {
+    width: 115px;
+    height: 30px;
+    font-family: var(--primary-font), sans-serif;
+    font-weight: 300;
+    font-size: 1.625rem;
+    color: var(--blue-color);
+    text-align: left;
+    margin-left: 8.5rem;
+    margin-top: 20px;
+    line-height: 1.875rem;
+    display: flex;
+    align-items: center;
+}
+.footer__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--dark-gray-color);
+    margin-left: 137px;
+    margin-top: 6px;
+    margin-bottom: 17px;
+}
+/*-- e: footer --*/
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 89px;
     background-color: var(--lynx-white-color);
     box-shadow: 0 -0.3125rem 2.5rem var(--black-color-transparent-200);
@@ -672,3 +716,8 @@
     margin-bottom: 17px;
 }
 /*-- e: footer --*/
+#footer {
+    height: 89px;
+    margin: 0 auto;
+    background-color: red;
+}
