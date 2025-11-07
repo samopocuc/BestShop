@@ -2,9 +2,7 @@
     box-sizing: border-box;
 }
 
-/* ========================
-   Variables
-======================== */
+/*-- Variables --*/
 :root {
     --white-color: #FFFFFF;
     --black-color: #000000;
@@ -27,23 +25,16 @@
     --primary-font: "Raleway", sans-serif;
     --secondary-font: "Open Sans", sans-serif;
 }
-
-
-
-
-/* ========================
-   Top Section
-======================== */
+/*--Top Section --*/
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-height: 4.375rem; /* 70px → rem: 4.375rem */
+    max-height: 4.375rem;
     margin: 0 auto;
     margin-bottom: 8.125rem;
     background-color: var(--white-color);
 }
-
 .top-section {
     width: 100%;
     position: fixed;
@@ -54,13 +45,11 @@
     align-items: center;
     min-height: 4.375rem;
     background: var(--white-color);
-    box-shadow: 0 -0.1875rem 2.5rem var(--black-color-transparent-200);
-
+    box-shadow: 0 0.1875rem 2.5rem var(--black-color-transparent-200);
 }
-
 .top-section__logo {
-    width: 8.875rem;  /* 142px */
-    height: 2.313rem; /* 37px */
+    width: 8.875rem;
+    height: 2.313rem;
     font-family: var(--primary-font), sans-serif;
     font-weight: 300;
     font-size: 2rem;
@@ -72,7 +61,6 @@
     display: flex;
     align-items: center;
 }
-
 .top-section__nav-list {
     font-family: var(--secondary-font), sans-serif;
     font-weight: 400;
@@ -81,7 +69,6 @@
     padding-right: 8.5rem;
     white-space: nowrap;
 }
-
 .top-section__nav-link {
     color: var(--dark-gray-color);
     text-decoration: none;
@@ -90,37 +77,32 @@
     letter-spacing: 0.205rem;
     font-size: 0.6875rem;
 }
-
 .top-section__nav-item:hover .top-section__nav-link {
     color: var(--black-color);
     font-weight: 700;
 }
-
 .top-section__nav-item .top-section__nav-link::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -1.5rem; /* 24px → 1.5rem */
-    width: 5.25rem;  /* 84px → 5.25rem */
+    bottom: -1.5rem;
+    width: 5.25rem;
     height: 0.25rem;
     background-color: var(--blue-color);
     opacity: 0;
 }
-
 .top-section__nav-item:hover .top-section__nav-link::after {
     opacity: 1;
 }
-
-/* ========================
-   Header
-======================== */
+/*-- e: top section --*/
+/*--Header --*/
 .header {
     width: 100%;
     height: 37.125rem;
     background-image: url("../images/background.png");
     background-color: var(--white-color);
-    background-position: bottom center;
+    background-position: -54.5px 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: padding-box;
@@ -129,9 +111,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 24.75rem;
-}
-
+    margin-top: 24.75rem;}
 .header__content {
     display: flex;
     flex-direction: column;
@@ -142,9 +122,8 @@
     padding: 0;
     background-color: transparent;
     color: var(--black-color);
-    margin-bottom: 31.25rem; /* 500px → 31.25rem */
+    margin-bottom: 31.25rem;
 }
-
 .header__title {
     font-family: var(--primary-font), sans-serif;
     font-weight: 450;
@@ -153,28 +132,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.25rem; /* 20px → 1.25rem */
+    margin-bottom: 1.25rem;
 }
-
 .header__subtitle {
     width: 24em;
     height: 1.375em;
     font-family: var(--secondary-font), sans-serif;
     font-size: 1.25rem;
-    margin-bottom: 2.375rem; /* 38px → 2.375rem */
+    margin-bottom: 2.375rem;
 }
-
-/* ========================
-   Button
-======================== */
+/*-- Button --*/
 .btn {
     color: var(--white-color);
     text-decoration: none;
 }
-
 .btn-container {
-    width: 27.5rem;  /* 440px → rem */
-    height: 4.1875rem; /* 67px → rem */
+    width: 27.5rem;
+    height: 4.1875rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,50 +157,43 @@
     text-decoration: none;
     font-weight: 800;
     font-size: 1rem;
-    margin-bottom: 16.875rem; /* 270px → rem */
+    margin-bottom: 16.875rem;
 }
-
 .btn-container .btn:hover {
     background-color: var(--vivid-blue-color);
 }
-
-/* ========================
-   Stolpci
-======================== */
-
+/*-- e: header --*/
+/*-- section2 The most popular sales platform in country --*/
+/*-- Stolpci --*/
 .columns {
     display: flex;
     flex-wrap: wrap;
-    gap: 9rem; /* 20px → rem */
+    gap: 9rem;
     justify-content: center;
 }
-
 .column {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 12.5rem;  /* 200px → rem */
-    height: 15.625rem; /* 250px → rem */
+    width: 12.5rem;
+    height: 15.625rem;
     text-align: center;
-    padding-top: 6.25rem; /* 100px → rem, prostor za krog + sliko */
+    padding-top: 6.25rem;
 }
-
 .circle {
-    width: 3.9375rem;  /* 63px → rem */
+    width: 3.9375rem;
     height: 3.9375rem;
     border-radius: 50%;
     position: absolute;
-    top: 1.25rem;      /* 20px → rem */
+    top: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
-
 .column:nth-child(1) .circle { background-color: var(--blue-color); }
 .column:nth-child(2) .circle { background-color: var(--red-color); }
 .column:nth-child(3) .circle { background-color: var(--green-color); }
-
 .column-img {
     position: absolute;
     top: 20%;
@@ -234,37 +201,33 @@
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-
-.column:nth-child(1) .column-img { width: 3.25rem; height: 2.75rem; } /* 52x44px → rem */
-.column:nth-child(2) .column-img { width: 4.0625rem; height: 2.25rem; } /* 65x36px → rem */
-.column:nth-child(3) .column-img { width: 3.25rem; height: 3rem; } /* 52x48px → rem */
-
+.column:nth-child(1) .column-img { width: 3.25rem; height: 2.75rem; }
+.column:nth-child(2) .column-img { width: 4.0625rem; height: 2.25rem; }
+.column:nth-child(3) .column-img { width: 3.25rem; height: 3rem; }
 .number {
     font-size: 1.25rem;
     font-weight: 800;
     font-family: var(--primary-font), sans-serif;
     color: var(--black-color);
-    margin-bottom: 0.3125rem; /* 5px → rem */
+    margin-bottom: 0.3125rem;
     z-index: 3;
 }
-
 .column p {
     font-size: 0.6875rem;
-    margin: 0.125rem 0 0 0; /* 2px → rem */
+    margin: 0.125rem 0 0 0;
     line-height: 1.25em;
     color: var(--very-dark-gray-color);
 }
-
 .section__container {
-        width: 100%;
-        height: 531px;
-        background-color: var(--white-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* vertikalno centriranje vsebine */
-        align-items: center;     /* horizontalno centriranje vsebine znotraj fiksnega containerja */
-    }
+    width: 100%;
+    height: 531px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
 .section__title {
     font-family: "Raleway", sans-serif;
     font-size: 2.25rem;
@@ -273,9 +236,9 @@
     white-space: nowrap;
     color: var(--black-color);
     text-align: center;
-    margin: 1.3rem 0 6.2rem 0;
+    margin: 0 0 6.2rem 0;
 }
-
+/*-- e: section2 The most popular sales platform in country --*/
 .features__container {
     width: 100%;
     height: 23.125rem;
@@ -321,14 +284,14 @@
 
 
 .feature-img-wrapper {
-    flex-shrink: 0;  /* prepreči, da se slika zmanjša */
+    flex-shrink: 0;
 }
 
 .feature-text {
-    width: 416px; /* fiksna širina besedila */
+    width: 416px;
     height: 188px;
-    text-align: left;  /* centrirano besedilo */
-    border: none;              /* odstrani vse meje */
+    text-align: left;
+    border: none;
     position: relative;
 }
 /* Pseudo-element ::after za spodnjo črto */
@@ -337,10 +300,10 @@
 .feature-text.color_green::after {
     content: "";
     position: absolute;
-    bottom: 0;                 /* na dnu bloka */
+    bottom: 0;
     left: 0;
-    width: 327px;              /* dolžina črte */
-    height: 4px;               /* debelina črte */
+    width: 327px;
+    height: 4px;
 }
 
 /* Barve za posamezne vrstice */
@@ -385,22 +348,22 @@
 .feature-img1,
 .feature-img2,
 .feature-img3 {
-    position: relative;      /* za pozicioniranje pseudo-elementa */
-    display: inline-block;   /* da pseudo-element ne pokvari layouta */
+    position: relative;
+    display: inline-block;
 }
 
 /* Štirikotnik za prvo sliko */
 .feature-img1::before {
     content: "";
     position: absolute;
-    top: 50%;                /* centrirano po vertikali */
-    left: 55%;               /* centrirano po horizontali */
-    transform: translate(-50%, -50%); /* centriranje */
-    width: 210px;            /* širina oblike */
-    height: 210px;           /* višina oblike */
-    background-color: #FB3B64; /* barva oblike */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* štirikotnik */
-    z-index: -1;             /* da je za sliko */
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+    height: 210px;
+    background-color: #FB3B64;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
     border-radius: 41px;
     rotate: 40deg;
 }
@@ -453,7 +416,7 @@
 }
 
 /* Naslov sekcije */
-.section__title {
+#service .section__title {
     text-align: center;
     margin-bottom: 2rem;
     font-family: Raleway, sans-serif;
@@ -606,7 +569,7 @@
     text-align: left;  /* poravnava h2 na levi rob levega stolpca */
 
 }
-.section__title {
+#contact .section__title {
     width: 342px;
     height: 57px;
     font-family: Raleway, sans-serif sans-serif;
